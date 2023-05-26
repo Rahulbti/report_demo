@@ -1,115 +1,140 @@
-import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Image from "next/image";
+import Link from "next/link";
+import TableComponent from "../src/components/TableComponent";
+import BannerImage from "../src/assets/Images/hero-banner.png";
+import Dummy1 from "../src/assets/Images/gauge1.png";
+import Dummy2 from "../src/assets/Images/gauge2.png";
+import Dummy3 from "../src/assets/Images/gauge3.png";
+
+import {
+  Container,
+  HeroBanner,
+  SummarySection,
+  LearnMore,
+  MetabolitesSection,
+} from "./indexStyled";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <Container>
+      <HeroBanner>
+        <Image
+          src={BannerImage}
+          width={353}
+          height={212}
+          alt="Picture of the author"
+        />
+        <div className="banner-text">
+          <h2>Lomi’s Report</h2>
+          <p>Beta report disclaimer</p>
         </div>
-      </main>
+      </HeroBanner>
+      <SummarySection>
+        <h4>Summary</h4>
+        <p>
+          We have evaluated Lomi’s vitamin, mineral, and metabolite (compounds)
+          profile and found that he is within the normal range for of the
+          compounds.
+        </p>
+        <p>
+          Lomi’s has the lowest values in <Link href="/">Adenosine</Link>,{" "}
+          <Link href="/">Cytidine</Link> and <Link href="/">Orotic</Link> acid.
+          He has the highest values in{" "}
+          <Link className="red-text" href="/">
+            Citric acid
+          </Link>{" "}
+          <Link className="red-text" href="/">
+            Purine
+          </Link>
+          , and{" "}
+          <Link className="red-text" href="/">
+            Uridine
+          </Link>
+          . Together these compounds has been associated with{" "}
+          <span>kidney disease</span>, <span>immune system</span>, and{" "}
+          <span>joint disease</span>. Lomi’ nutritional profile resembles that
+          of a <span>young</span> dog that has an <span>active</span> lifestyle
+          being fed with <span>premium</span> diet.
+        </p>
+      </SummarySection>
+      <LearnMore>
+        <p>
+          Learn more about our methods <Link href="/">here</Link>.{" "}
+        </p>
+        <div className="chart-section">
+          <Image
+            src={Dummy1}
+            width={247}
+            height={219}
+            alt="Picture of the author"
+          />
+          <Image
+            src={Dummy2}
+            width={247}
+            height={219}
+            alt="Picture of the author"
+          />
+          <Image
+            src={Dummy3}
+            width={247}
+            height={219}
+            alt="Picture of the author"
+          />
+        </div>
+      </LearnMore>
+      <MetabolitesSection>
+        <h3>Metabolites</h3>
+        <TableComponent />
+      </MetabolitesSection>
+      <SummarySection>
+        <h4>Recommendations </h4>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+        <p>
+          Lomi’s has the lowest values in <Link href="/">Adenosine</Link>,{" "}
+          <Link href="/">Cytidine</Link> and <Link href="/">Orotic</Link> acid.
+          He has the highest values in{" "}
+          <Link className="red-text" href="/">
+            Citric acid
+          </Link>{" "}
+          <Link className="red-text" href="/">
+            Purine
+          </Link>
+          , and{" "}
+          <Link className="red-text" href="/">
+            Uridine
+          </Link>
+          .
+        </p>
+      </SummarySection>
+      <SummarySection className="m-0">
+        <h4>Disclaimer </h4>
+        <p>
+          Please consult our disclaimer <Link href="/">here</Link>. and always
+          speak to a veterinary professional prior to instituting any change.
+          This recommendation is based on what would influence Lomi’s wellness,
+          which is determined based on a weighted combination of his longevity,
+          energy level, and cancer associations.
+        </p>
+        <p>
+          Currently our database of <Link href="/">poodles</Link> are still
+          limited, so this report will improve as we get more samples. In the
+          mean that we are comparing Lomi to all other dogs. Please bear with us
+          as we grow the value of the report and{" "}
+          <Link href="/">let us know</Link> if there is any wish list of things
+          you would like us to be able to predict for Lomi’s wellness.
+        </p>
+        <p>
+          {" "}
+          It is important to remember that no specific amount of a compound is
+          good or bad but reflect the state of their body function and should
+          always be interpreted in consultation with an experienced veterinary
+          professional.
+        </p>
+        <p>
+          Learn more about our considerations when interpreting the report{" "}
+          <Link href="/">here</Link>.
+        </p>
+      </SummarySection>
+    </Container>
+  );
 }
