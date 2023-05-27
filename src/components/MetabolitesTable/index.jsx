@@ -197,6 +197,7 @@ const TableStyled = styled.div`
           }
           :nth-child(3) {
             width: 250px;
+            color: #000000;
           }
         }
       }
