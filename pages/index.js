@@ -51,10 +51,12 @@ export default function Home() {
             Uridine
           </Link>
           . Together these compounds has been associated with{" "}
-          <span>kidney disease</span>, <span>immune system</span>, and{" "}
-          <span>joint disease</span>. Lomi’ nutritional profile resembles that
-          of a <span>young</span> dog that has an <span>active</span> lifestyle
-          being fed with <span>premium</span> diet.
+          <Link href="/">kidney disease</Link>,{" "}
+          <Link href="/">immune system</Link>, and{" "}
+          <Link href="/">joint disease</Link>. Lomi’ nutritional profile
+          resembles that of a <Link href="/">young</Link> dog that has an{" "}
+          <Link href="/"> active</Link> lifestyle being fed with{" "}
+          <Link href="/">premium</Link> diet.
         </p>
       </SummarySection>
       <LearnMore>
@@ -84,6 +86,10 @@ export default function Home() {
       </LearnMore>
       <MetabolitesSection>
         <h3>Metabolites</h3>
+        <TableComponent />
+      </MetabolitesSection>
+      <MetabolitesSection>
+        <h3>Wellness</h3>
         <TableComponent />
       </MetabolitesSection>
       <SummarySection>
