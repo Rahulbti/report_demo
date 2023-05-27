@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import TableComponent from "../src/components/TableComponent";
+import MetabolitesTable from "../src/components/MetabolitesTable";
 import BannerImage from "../src/assets/Images/hero-banner.png";
 import Dummy1 from "../src/assets/Images/gauge1.png";
 import Dummy2 from "../src/assets/Images/gauge2.png";
@@ -86,7 +87,7 @@ export default function Home() {
       </LearnMore>
       <MetabolitesSection>
         <h3>Metabolites</h3>
-        <TableComponent />
+        <MetabolitesTable />
       </MetabolitesSection>
       <MetabolitesSection>
         <h3>Wellness</h3>

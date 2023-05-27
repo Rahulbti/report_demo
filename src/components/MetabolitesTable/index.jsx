@@ -13,7 +13,7 @@ function valuetext(value) {
   return `${value}°C`;
 }
 export default function TableComponent() {
-  const [value, setValue] = React.useState([0, 100]);
+  const [value, setValue] = React.useState([20, 37]);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -31,7 +31,15 @@ export default function TableComponent() {
                 <Descending />
               </div>
             </th>
-            <th>{""}</th>
+            <th>
+              <div className="flex-wrapper">
+                Category
+                <Ascending />
+              </div>
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -46,25 +54,10 @@ export default function TableComponent() {
               />
             </td>
             <td>Metabollite</td>
-            <td>
-              <Box
-                sx={{
-                  width: 164,
-                  marginLeft: "auto",
-                  padding: "0 20px",
-                  background: "#F0F0F0",
-                  borderRadius: "8px",
-                }}
-              >
-                <Slider
-                  getAriaLabel={() => "Temperature range"}
-                  value={value}
-                  onChange={handleChange}
-                  valueLabelDisplay="auto"
-                  getAriaValueText={valuetext}
-                />
-              </Box>
-            </td>
+            <td>Amino Acids</td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>
@@ -77,25 +70,10 @@ export default function TableComponent() {
               />
             </td>
             <td>Metabollite</td>
-            <td>
-              <Box
-                sx={{
-                  width: 164,
-                  marginLeft: "auto",
-                  padding: "0 20px",
-                  background: "#F0F0F0",
-                  borderRadius: "8px",
-                }}
-              >
-                <Slider
-                  getAriaLabel={() => "Temperature range"}
-                  value={value}
-                  onChange={handleChange}
-                  valueLabelDisplay="auto"
-                  getAriaValueText={valuetext}
-                />
-              </Box>
-            </td>
+            <td>Amino Acids</td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>
@@ -108,25 +86,10 @@ export default function TableComponent() {
               />
             </td>
             <td>Metabollite</td>
-            <td>
-              <Box
-                sx={{
-                  width: 164,
-                  marginLeft: "auto",
-                  padding: "0 20px",
-                  background: "#F0F0F0",
-                  borderRadius: "8px",
-                }}
-              >
-                <Slider
-                  getAriaLabel={() => "Temperature range"}
-                  value={value}
-                  onChange={handleChange}
-                  valueLabelDisplay="auto"
-                  getAriaValueText={valuetext}
-                />
-              </Box>
-            </td>
+            <td>Amino Acids</td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>
@@ -139,25 +102,10 @@ export default function TableComponent() {
               />
             </td>
             <td>Metabollite</td>
-            <td>
-              <Box
-                sx={{
-                  width: 164,
-                  marginLeft: "auto",
-                  padding: "0 20px",
-                  background: "#F0F0F0",
-                  borderRadius: "8px",
-                }}
-              >
-                <Slider
-                  getAriaLabel={() => "Temperature range"}
-                  value={value}
-                  onChange={handleChange}
-                  valueLabelDisplay="auto"
-                  getAriaValueText={valuetext}
-                />
-              </Box>
-            </td>
+            <td>Amino Acids</td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
@@ -247,11 +195,20 @@ const TableStyled = styled.div`
           :nth-child(2) {
             width: 250px;
           }
+          :nth-child(3) {
+            width: 250px;
+          }
         }
       }
     }
     tr {
       font-size: 20px;
+      :first-child {
+        background: #e2e3e5;
+        th {
+          height: 59px;
+        }
+      }
       :nth-child(odd) {
         background-color: #f8f5f1;
       }
