@@ -6,6 +6,7 @@ import styled from "styled-components";
 import DummyDataImage from "../../assets/Images/dummy-table-td.png";
 import Descending from "../../assets/SVG/Descending";
 import Ascending from "../../assets/SVG/Ascending";
+import HeartIcon from "../../assets/SVG/HeartIcon";
 import Next from "../../assets/Images/next.png";
 import Prev from "../../assets/Images/prev.png";
 
@@ -37,13 +38,7 @@ export default function TableComponent() {
         <tbody>
           <tr>
             <td>
-              {" "}
-              <Image
-                src={DummyDataImage}
-                width={50}
-                height={50}
-                alt="Picture of the author"
-              />
+              <HeartIcon />
             </td>
             <td>Metabollite</td>
             <td>
@@ -68,13 +63,7 @@ export default function TableComponent() {
           </tr>
           <tr>
             <td>
-              {" "}
-              <Image
-                src={DummyDataImage}
-                width={50}
-                height={50}
-                alt="Picture of the author"
-              />
+              <HeartIcon />
             </td>
             <td>Metabollite</td>
             <td>
@@ -99,13 +88,7 @@ export default function TableComponent() {
           </tr>
           <tr>
             <td>
-              {" "}
-              <Image
-                src={DummyDataImage}
-                width={50}
-                height={50}
-                alt="Picture of the author"
-              />
+              <HeartIcon />
             </td>
             <td>Metabollite</td>
             <td>
@@ -130,13 +113,7 @@ export default function TableComponent() {
           </tr>
           <tr>
             <td>
-              {" "}
-              <Image
-                src={DummyDataImage}
-                width={50}
-                height={50}
-                alt="Picture of the author"
-              />
+              <HeartIcon />
             </td>
             <td>Metabollite</td>
             <td>
